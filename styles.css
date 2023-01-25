@@ -38,6 +38,9 @@ body,
   color: rgb(255, 60, 0);
   background-color: rgb(141, 92, 42);
 }
+.grid-element:hover {
+  border: 1px solid red;
+}
 .grid-element.shot {
   background-image: url("imgs/hole.png");
   background-position: center;
@@ -56,6 +59,7 @@ body,
   color: black;
 }
 .game-over {
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
   height: 20vh;
   width: 110%;
   margin: auto;
@@ -80,6 +84,9 @@ header {
   align-items: center;
 }
 h1 {
+  font-family: var(--Django);
+  color: darkblue;
+  text-shadow: -5px 5px white;
   font-size: 4rem;
 }
 .score {
@@ -90,8 +97,17 @@ h1 {
   align-items: center;
 }
 .reset {
-  padding: 15px;
+  font-family: var(--Django);
+  padding: 20px 40px;
+  border-radius: 20px;
   font-weight: bold;
+  font-size: 2rem;
+  box-shadow: -1px 5px darkgreen;
+}
+.reset:hover {
+  color: darkblue;
+  margin-top: 5px;
+  box-shadow: none;
 }
 .sidewalk {
   height: 40px;
