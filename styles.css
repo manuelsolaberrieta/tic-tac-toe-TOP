@@ -23,12 +23,11 @@ body,
 .grid {
   border: 2px solid black;
   height: 50vh;
-  width: 50vh;
-  margin: auto;
+  margin-left: 50%;
+  transform: translate(-50%);
   display: grid;
-  /* the 1fr below its just so the square can extend the bit that's left, to fit perfectly */
-  grid-template-columns: repeat(auto-fit, minmax(calc(50vh / 3), 1fr));
-  grid-template-rows: repeat(auto-fit, minmax(calc(50vh / 3), 1fr));
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
 }
 .grid-element {
   border: 1px solid black;
