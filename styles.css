@@ -113,3 +113,15 @@ h1 {
   height: 40px;
   background-color: rgb(102, 63, 27);
 }
+@media only screen and (max-width: 600px) {
+  .grid {
+    border: 2px solid black;
+    height: 50vh;
+    width: 70vw;
+    margin: auto;
+    display: grid;
+    /* the 1fr below its just so the square can extend the bit that's left, to fit perfectly */
+    grid-template-columns: repeat(auto-fit, minmax(calc(70vw / 3), 1fr));
+    grid-template-rows: repeat(auto-fit, minmax(calc(45vh / 3), 1fr));
+  }
+}
