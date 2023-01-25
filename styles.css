@@ -3,7 +3,7 @@
   padding: 0;
 }
 body {
-  min-width: 100vh;
+  min-height: 100vh;
 }
 :root {
   --Django: Django;
@@ -23,11 +23,12 @@ body,
 .grid {
   border: 2px solid black;
   height: 50vh;
-  margin-left: 50%;
-  transform: translate(-50%);
+  width: 50vh;
+  margin: auto;
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 1fr 1fr 1fr;
+  /* the 1fr below its just so the square can extend the bit that's left, to fit perfectly */
+  grid-template-columns: repeat(auto-fit, minmax(calc(50vh / 3), 1fr));
+  grid-template-rows: repeat(auto-fit, minmax(calc(50vh / 3), 1fr));
 }
 .grid-element {
   border: 1px solid black;
