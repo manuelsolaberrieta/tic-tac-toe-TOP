@@ -1,0 +1,99 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  min-width: 100vh;
+}
+:root {
+  --Django: Django;
+}
+@font-face {
+  font-family: Django;
+  src: url(fonts/Rancho-Regular.ttf);
+}
+main,
+header {
+  background-color: lightblue;
+}
+body,
+.score {
+  background-color: rgb(133, 194, 75);
+}
+.grid {
+  border: 2px solid black;
+  height: 50vh;
+  width: 50vh;
+  margin: auto;
+  display: grid;
+  /* the 1fr below its just so the square can extend the bit that's left, to fit perfectly */
+  grid-template-columns: repeat(auto-fit, minmax(calc(50vh / 3), 1fr));
+  grid-template-rows: repeat(auto-fit, minmax(calc(50vh / 3), 1fr));
+}
+.grid-element {
+  border: 1px solid black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: rgb(255, 60, 0);
+  background-color: rgb(141, 92, 42);
+}
+.grid-element.shot {
+  background-image: url("imgs/hole.png");
+  background-position: center;
+  color: black;
+}
+.grid-element.branded {
+  font-size: 4rem;
+  font-weight: bolder;
+  font-family: var(--Django);
+  -webkit-transition: color 1s ease-in;
+  -moz-transition: color 1s ease-in;
+  -o-transition: color 1s ease-in;
+  transition: color 1s ease-in;
+}
+.grid-element.branded:defined {
+  color: black;
+}
+.game-over {
+  height: 20vh;
+  width: 110%;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: black;
+  color: white;
+  font-size: 4rem;
+  font-weight: bold;
+  text-align: center;
+  position: absolute;
+  top: 40vh;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+header {
+  height: 15vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+h1 {
+  font-size: 4rem;
+}
+.score {
+  height: 15vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.reset {
+  padding: 15px;
+  font-weight: bold;
+}
+.sidewalk {
+  height: 40px;
+  background-color: rgb(102, 63, 27);
+}
