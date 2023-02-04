@@ -124,8 +124,10 @@ class Game {
   reset() {
     this.grid = [];
     this.webGrid.replaceChildren();
-    this.webGameOver.remove();
-    this.gameOver = false;
+    if (this.gameOver === true) {
+      this.webGameOver.remove();
+      this.gameOver = false;
+    }
     this.createGrid();
   }
   endGame() {
